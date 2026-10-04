@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+    PORTAFOLIO DE HAIAT GHADDARI
+    Página web personal hecha con HTML, CSS y JavaScript.
+
+    La página tiene dos partes:
+      1. La intro: el dibujo del bosque, que se acerca al hacer scroll.
+      2. El contenido: mis datos, habilidades, experiencia, proyectos,
+         formación y contacto.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiat Ghaddari - Portafolio</title>
+    <meta name="description" content="Portafolio de Haiat Ghaddari, estudiante de Desarrollo de Aplicaciones Multiplataforma.">
+
+    <!-- Icono que sale en la pestaña del navegador -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ===================================================
+         MENÚ DE NAVEGACIÓN
+         Está escondido al principio. Aparece cuando se hace
+         scroll (lo controla el JavaScript).
+         =================================================== -->
+    <header class="menu" id="menu">
+
+        <a href="#contenido" class="menu-logo">
+            <img src="img/icono-h-claro.png" alt="" width="34" height="34">
+            Haiat
+        </a>
+
+        <!-- Botón para cambiar entre modo claro y oscuro -->
+        <button class="boton-tema" id="botonTema">Modo claro</button>
+
+        <!-- Botón que abre el menú en el móvil -->
+        <button class="boton-menu" id="botonMenu">Menú</button>
+
+        <nav class="menu-nav" id="menuNav">
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ===================================================
+         1. INTRO
+         La imagen está fija en la pantalla. Al hacer scroll,
+         el JavaScript la hace más grande y va oscureciendo
+         el velo que tiene encima.
+         =================================================== -->
+    <section class="intro" id="intro">
+
+        <img src="img/fondo-bosque.jpg"
+             alt="Dibujo de una chica trabajando con un ordenador en medio de un bosque, con un gato naranja a su lado."
+             class="intro-imagen"
+             id="introImagen">
+
+        <!-- Velo que tapa la imagen poco a poco -->
+        <div class="intro-velo" id="introVelo"></div>
+
+        <!-- Texto de bienvenida -->
+        <div class="intro-texto" id="introTexto">
+            <p class="intro-saludo">Hola, soy</p>
+            <h1>Haiat Ghaddari</h1>
+            <p class="intro-oficio">Desarrollo de Aplicaciones Multiplataforma</p>
+            <a href="#contenido" class="boton boton-oscuro">Entrar al portafolio</a>
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         2. CONTENIDO
+         =================================================== -->
+    <main class="contenido" id="contenido">
+
+        <!-- ---------- PRESENTACIÓN ---------- -->
+        <section class="presentacion">
+
+            <img src="img/icono-h-claro.png" alt="Mi logo: una cara hecha de hojas" class="logo-grande">
+
+            <h2>Haiat Ghaddari</h2>
+            <p class="lema">Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
+
+            <!-- Datos personales (sacados de mi currículum) -->
+            <ul class="datos">
+                <li>
+                    <span class="dato-titulo">Ubicación</span>
+                    Reus, Tarragona
+                </li>
+                <li>
+                    <span class="dato-titulo">Correo</span>
+                    <a href="mailto:haiat.ghadd@gmail.com">haiat.ghadd@gmail.com</a>
+                </li>
+                <li>
+                    <span class="dato-titulo">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/haiatghaddarighaddari" target="_blank">
+                        Ver mi perfil
+                    </a>
+                </li>
+                <li>
+                    <span class="dato-titulo">Idiomas</span>
+                    Catalán, castellano y amazig
+                </li>
+            </ul>
+
+            <div class="botones">
+                <a href="docs/Cv_HaiatGhaddari.pdf" class="boton" download>Descargar mi CV</a>
+                <a href="#contacto" class="boton boton-linea">Contactar</a>
+            </div>
+
+        </section>
+
+
+        <!-- ---------- SOBRE MÍ ---------- -->
+        <section class="seccion revelar" id="sobre-mi">
+
+            <h2 class="titulo">Sobre mí</h2>
+
+            <p>
+                Estudiante de CFGS en Desarrollo de Aplicaciones Multiplataforma con
+                experiencia práctica en desarrollo web, SEO, gestión de contenidos,
+                redes sociales y herramientas de inteligencia artificial.
+            </p>
+            <p>
+                Perfil técnico y digital, con capacidad de aprendizaje rápido,
+                adaptación a nuevos entornos y facilidad para combinar conocimientos
+                tecnológicos con comunicación y organización.
+            </p>
+
+            <h3>Competencias personales</h3>
+            <ul class="etiquetas">
+                <li>Resolución de problemas</li>
+                <li>Comunicación</li>
+                <li>Liderazgo</li>
+                <li>Gestión de proyectos</li>
+                <li>Diseño</li>
+                <li>Creación de contenido</li>
+                <li>Análisis de datos</li>
+                <li>Responsabilidad</li>
+                <li>Flexibilidad</li>
+                <li>Trabajo en equipo</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ---------- HABILIDADES ---------- -->
+        <section class="seccion revelar" id="habilidades">
+
+            <h2 class="titulo">Habilidades</h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <h3>Programación</h3>
+                    <ul class="etiquetas">
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>PL/SQL</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Desarrollo web</h3>
+                    <ul class="etiquetas">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Mantenimiento web</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Herramientas</h3>
+                    <ul class="etiquetas">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Inteligencia artificial</h3>
+                    <ul class="etiquetas">
+                        <li>Claude</li>
+                        <li>Kimi</li>
+                        <li>ChatGPT</li>
+                        <li>Prompting</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Marketing digital</h3>
+                    <ul class="etiquetas">
+                        <li>SEO</li>
+                        <li>Redes sociales</li>
+                        <li>Creación de contenidos</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>Diseño</h3>
+                    <ul class="etiquetas">
+                        <li>Canva</li>
+                        <li>Edición de vídeo</li>
+                        <li>Ilustración</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>Idiomas</h3>
+            <ul class="idiomas">
+                <li>Catalán <span class="nivel">Nativo</span></li>
+                <li>Castellano <span class="nivel">Nativo</span></li>
+                <li>Amazig / Bereber <span class="nivel">Nativo</span></li>
+                <li>Inglés <span class="nivel nivel-basico">Básico</span></li>
+                <li>Francés <span class="nivel nivel-basico">Básico</span></li>
+                <li>Árabe <span class="nivel nivel-basico">Básico</span></li>
+            </ul>
+
+        </section>
+
+
+        <!-- ---------- EXPERIENCIA ---------- -->
+        <section class="seccion revelar" id="experiencia">
+
+            <h2 class="titulo">Experiencia</h2>
+
+            <div class="experiencia">
+                <span class="fecha">2026 - actualidad</span>
+                <h3>Prácticas profesionales</h3>
+                <p class="lugar">Nexoria Holdings / Arkos Investor</p>
+                <ul>
+                    <li>Mantenimiento y mejora del contenido y el estilo de una página web.</li>
+                    <li>Apoyo en tareas de SEO y planificación de contenidos.</li>
+                    <li>Gestión y creación de contenidos para redes sociales.</li>
+                    <li>Creación de vídeos y piezas visuales con Canva.</li>
+                    <li>Uso de Claude, Kimi, ChatGPT y otras herramientas de IA.</li>
+                    <li>Creación y optimización de prompts.</li>
+                </ul>
+            </div>
+
+            <div class="experiencia">
+                <span class="fecha">2023 - 2024</span>
+                <h3>Profesora particular</h3>
+                <p class="lugar">Clases a domicilio</p>
+                <ul>
+                    <li>Clases de dibujo técnico e historia con atención personalizada.</li>
+                    <li>Responsabilidad, puntualidad y comunicación con alumnos y familias.</li>
+                </ul>
+            </div>
+
+            <div class="experiencia">
+                <span class="fecha">2022 - 2023</span>
+                <h3>Cuidadora / Canguro</h3>
+                <p class="lugar">Familias particulares</p>
+                <ul>
+                    <li>Cuidado de niños, organización de actividades y apoyo escolar.</li>
+                    <li>Trato amable, paciencia y sentido de la responsabilidad.</li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <!-- ---------- PROYECTOS ---------- -->
+        <section class="seccion revelar" id="proyectos">
+
+            <h2 class="titulo">Proyectos</h2>
+
+            <p>Aquí iré subiendo los proyectos que haga durante el ciclo.</p>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <h3>Este portafolio</h3>
+                    <p>
+                        Mi página personal, hecha con HTML, CSS y JavaScript.
+                        Tiene una intro con zoom al hacer scroll, modo claro y
+                        oscuro, y las ilustraciones las he dibujado yo.
+                    </p>
+                    <ul class="etiquetas">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta tarjeta-vacia">
+                    <p>Próximamente</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ---------- FORMACIÓN Y CERTIFICADOS ---------- -->
+        <section class="seccion revelar" id="formacion">
+
+            <h2 class="titulo">Formación y certificados</h2>
+
+            <h3>Formación académica</h3>
+
+            <div class="experiencia">
+                <span class="fecha">En curso</span>
+                <h3>CFGS Desarrollo de Aplicaciones Multiplataforma</h3>
+                <p class="lugar">Institut Baix Camp</p>
+            </div>
+
+            <div class="experiencia">
+                <span class="fecha">2023 - 2025</span>
+                <h3>Bachillerato Tecnológico</h3>
+                <p class="lugar">Institut Lluís Domènech i Montaner</p>
+            </div>
+
+            <div class="experiencia">
+                <span class="fecha">Finalizado</span>
+                <h3>ESO</h3>
+                <p class="lugar">Institut Lluís Domènech i Montaner</p>
+            </div>
+
+            <h3>Certificados</h3>
+
+            <div class="tarjetas">
+                <div class="tarjeta tarjeta-vacia">
+                    <p>Todavía no tengo certificados. Los iré añadiendo aquí.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ---------- CONTACTO ---------- -->
+        <section class="seccion revelar" id="contacto">
+
+            <h2 class="titulo">Contacto</h2>
+
+            <p>Si quieres escribirme, por aquí me encuentras.</p>
+
+            <div class="tarjetas">
+
+                <a href="mailto:haiat.ghadd@gmail.com" class="tarjeta tarjeta-enlace">
+                    <h3>Correo</h3>
+                    <p>haiat.ghadd@gmail.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/haiatghaddarighaddari" target="_blank" class="tarjeta tarjeta-enlace">
+                    <h3>LinkedIn</h3>
+                    <p>Mi perfil profesional</p>
+                </a>
+
+                <a href="docs/Cv_HaiatGhaddari.pdf" download class="tarjeta tarjeta-enlace">
+                    <h3>Currículum</h3>
+                    <p>Descargar en PDF</p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ---------- PIE DE PÁGINA ---------- -->
+        <footer class="pie">
+            <p>Ilustraciones dibujadas por mí.</p>
+            <p>Haiat Ghaddari - <span id="anyo"></span></p>
+        </footer>
+
+    </main>
+
+
+    <!-- El JavaScript va al final para que primero se cargue el contenido -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
